@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+$bright_red: hsl(12, 88%, 59%);
+$dark_blue: hsl(228, 39%, 23%);
+$dark_grayish_blue: hsl(227, 12%, 61%);
+$very_dark_blue: hsl(233, 12%, 13%);
+$very_pale_red: hsl(13, 100%, 96%);
+$very_light_gray: hsl(0, 0%, 98%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    body {
+        font-family: 'Be Vietnam Pre', sans-serif;
+        
+        #pricing {
+            @media (min-width: 768px) {
+                height: 100vh;
+
+                .bmg {
+                    padding-left: 0 !important;
+                }
+            }
+
+            .navbar {
+                a:hover {
+                    color: $dark_grayish_blue;
+                }
+            }
+
+            
+                .illustration-intro {
+                    img {
+                        width: -webkit-fill-available;
+                    }
+                }
+            
+        }
+    }
+
+    .get-started {
+        background-color: $bright_red;
+        color: $very_light_gray;
+        width: 150px;
+        transition: 0.3s;
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px;
+        box-shadow: 0 6px 10px $bright_red;
+        
+        @media (min-width: 567px) {
+            &:hover {
+                background-color: $bright_red;
+                color: $very_light_gray;
+                opacity: 0.7;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    #product {
+        @media (max-width: 566px) {
+            .marked::before {
+                content: "";
+                background-color: $very_pale_red;
+                width: 500px;
+                height: 25px;
+                display: inline-block;
+                position: relative;
+                left: 40px;
+                top: 26px;
+                z-index: -1;
+            }
+        }
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+
+            .wdiff {
+                width: 200px;
+            }
+            
+            .tae {
+                width: 580px;
+                
+                p {
+                    margin-left: 55px;
+                }
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .wdiff {
+                width: 300px
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .wdiff {
+                width: 350px;
+            }
+        }
+    }
+    
+    .article {
+        background-color: $very_light_gray;
+        position: relative;
+
+        img {
+            position: relative;
+            top: -35px;
+        }
+    }
+
+    .small-pill {
+        background-color: $bright_red;
+        color: $very_light_gray;
+    }
+
+    #careers {
+        background-color: $bright_red;
+
+        .get-started {
+            background-color: $very_light_gray;
+            color: $bright_red;
+        }
+    }
+
+    #community {
+        background-color: $very_dark_blue;
+
+        #go {
+            background-color: $bright_red;
+            color: $very_pale_red;
+            font-weight: bold;
+        }
+
+        li a{
+            color: $very_pale_red;
+            @media (min-width: 567px) {
+                &:hover {
+                    color: $bright_red;
+                }
+            }
+        }
+
+        .brands img:hover {
+            @media (min-width: 567px) {
+                cursor: pointer
+            }
+        }
+    }
+
+    @media (min-width: 567px) and (max-width: 767px) {
+        display: none;
+    }  
+}
